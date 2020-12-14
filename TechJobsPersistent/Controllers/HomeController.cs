@@ -32,7 +32,8 @@ namespace TechJobsPersistent.Controllers
         [HttpGet("/Add")]
         public IActionResult AddJob()
         {
-            return View();
+            AddJobViewModel Job = new AddJobViewModel();
+            return View(Job);
         }
 
         public IActionResult ProcessAddJobForm()
