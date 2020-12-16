@@ -53,12 +53,12 @@ namespace TechJobsPersistent.Controllers
         }
 
         [HttpPost]
-        [Route("/employer/add")]
+        [Route("/Home/AddJob")]
         public IActionResult ProcessAddEmployerForm(AddEmployerViewModel viewModel)
         {
             if (ModelState.IsValid)
             {
-
+               
                 string name = viewModel.Name;
                 string location = viewModel.Location;
 
@@ -69,19 +69,18 @@ namespace TechJobsPersistent.Controllers
 
                 if (emps.Count == 0)
                 {
-                    Employer employer = new Employer
+                    Employer empl = new Employer
                     {
                         Name = name,
                         Location = location
                     };
-                    context.Employers.Add(employer);
+                    context.Employers.Add(empl);
                     context.SaveChanges();
                 }
 
-                return Redirect("/Home/AddJob");
-            }
 
-            return View(viewModel);
+            }
+            return Redirect("/Add");
         }
 
         public IActionResult About(int id)
