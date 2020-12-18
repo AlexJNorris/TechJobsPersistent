@@ -16,11 +16,11 @@
 <p style="color:red;">No jobs yet!</p>}
 else
 {
-<select name="employer">
+<select name="employerId">
 
     @foreach (Employer employer in ViewBag.Employers)
     {
-<option value="@employer.Name">@employer.Name</option>}
+<option value="@employer.Id">@employer.Name</option>}
 </select>}
 
         <a href="/employer/add">Add employer.</a>

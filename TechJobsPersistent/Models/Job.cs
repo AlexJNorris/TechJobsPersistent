@@ -20,10 +20,9 @@ namespace TechJobsPersistent.Models
 
         }
 
-        public Job(string name, int employerId)
+        public Job(string name)
         {
             Name = name;
-            EmployerId = employerId;
         }
     }
 }

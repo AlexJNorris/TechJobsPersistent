@@ -12,9 +12,5 @@ namespace TechJobsPersistent.Models
         public JobSkill()
         {
         }
-        public JobSkill(Job job)
-        {
-            JobId = job.Id;
-        }
     }
 }
