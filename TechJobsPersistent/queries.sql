@@ -1,10 +1,8 @@
 --Part 1
-select * from employers;
-select * from jobs;
-select * from skills;
-select * from jobskills;
+Id = INT, Name = LONGTEXT, EmployerId = INT.
 --Part 2
-select * from employers;
+select * from employers where (location = 'St. Louis');
 
 --Part 3
 
+SELECT Name, Description FROM techjobs.Skills inner join techjobs.JobSkills on (JobSkills.SkillId = Skills.Id)order by Name ASC;
